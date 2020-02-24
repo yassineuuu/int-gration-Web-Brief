@@ -1,6 +1,6 @@
-# Mini projet - Section de quatre cartes
+# C2N3-reenforcement
 
-Le mini projet permet d'améliorer vos compétences dans un environnement de travail réel.
+Le projet permet d'améliorer vos compétences dans un environnement de travail réel.
 
 ## Contexte
 
