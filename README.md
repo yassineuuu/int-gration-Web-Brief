@@ -19,8 +19,7 @@ Il existe également un fichier `style-guide.md`, qui contient les informations 
 3. Utilisation correcte des sélecteur CSS (Une révision du principe de Cascading & Spécificité).
 4. Utilisation de la technologie SASS et compilation via node-sass au lieu du plugin VSCode.
 5. Auto-compilation et auto-prefixage est requise (live server nodejs est un bonnus souhaitable).
-6. Poduire un code reutilisable et application du concept BEM dans le projet.
-7.
+6. Produire un code reutilisable et application du concept BEM dans le projet.
 
 ## Déroulement
 
