@@ -1,0 +1,20 @@
+{
+  "name": "C2N3-Reenforcement",
+  "version": "1.0.0",
+  "description": "Le projet permet d'améliorer vos compétences dans un environnement de travail réel.",
+  "main": "index.js",
+  "scripts": {
+    "node-sass": "node-sass -w sass -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yassineuuu/int-gration-Web-Brief.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yassineuuu/int-gration-Web-Brief/issues"
+  },
+  "homepage": "https://github.com/yassineuuu/int-gration-Web-Brief#readme"
+}
