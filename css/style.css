@@ -1,4 +1,75 @@
+@import "https://fonts.google.com/specimen/Barlow+Condensed";
 * {
   margin: 0px;
   padding: 0px;
-  font-family: poppins,sans-serif; }
+  overflow: hidden; }
+
+body {
+  font-family: "Barlow"; }
+  body .menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem; }
+    body .menu__nav {
+      display: none; }
+    body .menu__hemberger__check {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      opacity: 0; }
+    body .menu__hemberger__line {
+      width: 25px;
+      height: 3px;
+      background-color: #5b5f71;
+      margin: .25rem auto; }
+  body .headings {
+    display: flex;
+    flex-direction: column; }
+    body .headings__illustration {
+      padding: 1rem; }
+      body .headings__illustration img {
+        width: 145%; }
+    body .headings__discription__title1 {
+      font-family: "Barlow Condensed";
+      padding: 1rem;
+      color: #a0a1ac;
+      text-transform: uppercase;
+      letter-spacing: 3px; }
+      body .headings__discription__title1 span {
+        text-align: center;
+        font-weight: bold;
+        background-color: #242942;
+        color: white;
+        padding: .2rem .6rem;
+        border-radius: 20px; }
+    body .headings__discription__title2 {
+      font-family: "Barlow Condensed";
+      padding: 1rem;
+      color: #242942;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 40px; }
+    body .headings__discription__paragraphe {
+      padding: 1rem;
+      color: #5b5f71;
+      font-size: 22px; }
+    body .headings__discription__sub {
+      text-transform: uppercase;
+      padding: 1rem;
+      font-size: 18px;
+      color: #a0a1ac;
+      font-family: "Barlow Condensed";
+      word-spacing: 3px; }
+      body .headings__discription__sub input {
+        letter-spacing: 1.5px;
+        font-family: "Barlow Condensed";
+        text-transform: uppercase;
+        font-weight: 600;
+        background-color: #ff5c5c;
+        border: none;
+        color: white;
+        padding: .7rem 1rem;
+        border-radius: 5px; }
+      body .headings__discription__sub span {
+        padding: 0rem .7rem 0rem; }

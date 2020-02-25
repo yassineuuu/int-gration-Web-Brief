@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Project tracking intro component</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,900&display=swap" rel="stylesheet">  <link href="https://fonts.googleapis.com/css?family=Barlow:400,900&display=swap" rel="stylesheet">  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Project tracking intro component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="menu">
-        <div class="menu__logo"><img src="images/logo.svg" alt="logo"></div>
-            <nav class="menu__nav menu__nav--hover">
-              <il><a href="#">Product</a></il> 
-              <il> <a href="#">Features</a></il>
-              <il> <a href="#">Pricing</a></il>
-              <il> <a href="#">Login</a></il>
-            </nav>
-            <div class="menu__hemberger"><img src="images/icon-hamburger.svg" alt="menu-humberger"></div>
-  </div>
-  <div class="heder__illustration"><img src="images/illustration-devices.svg" alt="illustration"></div>
-     <div class="header__title1"><span>New </span>Monograph Dashboard</div> 
-     <div class="header__title2"><h1>Powerful insights into your team</h1></div> 
-      <div class="header__discription">Project planning and time tracking for agile teams</div> 
-       <div class="header__sub"><input type="submit" value="Schedule a demo"> to see a live preview</div> 
-        </header>
-    <footer>
-      <p class="attribution">Coded by <a href="#">Yassine MAKHLOUK</a>.</p>
-    </footer>
-  </body>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      margin-top: 5rem;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <div class="menu__logo"><img src="images/logo.svg" alt="logo"></div>
+      <nav class="menu__nav menu__nav--hover">
+        <il><a href="#">Product</a></il>
+        <il> <a href="#">Features</a></il>
+        <il> <a href="#">Pricing</a></il>
+        <il> <a href="#">Login</a></il>
+      </nav>
+      <div class="menu__hemberger">
+        <div><input type="checkbox" class="menu__hemberger__check"></div>
+        <div class="menu__hemberger__line menu__hemberger__line--1"></div>
+        <div class="menu__hemberger__line menu__hemberger__line--2"></div>
+        <div class="menu__hemberger__line menu__hemberger__line--3"></div>
+      </div>
+    </div>
+    <div class="headings">
+      <div class="headings__illustration"><img src="images/illustration-devices.svg" alt="illustration"></div>
+      <div class="discription">
+      <div class="headings__discription__title1"><span>New</span> Monograph Dashboard</div>
+      <div class="headings__discription__title2">
+        Powerful insights into your team
+      </div>
+      <div class="headings__discription__paragraphe">Project planning and time tracking for agile teams</div>
+      <div class="headings__discription__sub headings__discription__sub--hover"><input type="submit" value="Schedule a demo"><span> to see a live preview</span></div>
+    </div>
+    </div>
+  </header>
+  <footer>
+    <p class="attribution">Coded by <a href="#">Yassine MAKHLOUK</a>.</p>
+  </footer>
+</body>
+
 </html>

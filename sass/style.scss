@@ -1,13 +1,114 @@
+@import "https://fonts.google.com/specimen/Barlow+Condensed";
+// variables
 $Red: hsl(0, 100%, 68%);
 $Dark-Blue: hsl(230, 29%, 20%);
 $Dark-GrayishBlue: hsl(230, 11%, 40%);
 $Grayish-Blue: hsl(231, 7%, 65%);
 $Light-GrayishBlue: hsl(207, 33%, 95%);
+// variables-end
+
+
 *{
     margin: 0px;
     padding: 0px;
-    font-family: poppins,sans-serif;
+    overflow: hidden;
 }
 
 body {
+    
+    font-family: 'Barlow', ;
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 1rem;
+
+        &__nav{
+            display: none;
+        }
+        &__hemberger{
+            &__check{
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+                opacity:0;
+            }
+            &__line{
+                width: 25px;
+                height: 3px;
+                background-color: $Dark-GrayishBlue;
+                margin: .25rem auto;
+            }
+        }
+    }
+    .headings{
+        display: flex;
+        flex-direction: column;
+        &__illustration{
+            padding: 1rem;
+            img{
+                width: 145%;
+
+            }
+        }
+        &__discription{
+            &__title1{
+                font-family: 'Barlow Condensed', ;
+                padding: 1rem;
+                color: $Grayish-Blue;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                
+                span{
+                    text-align: center;
+                    font-weight: bold;
+                    background-color: $Dark-Blue;
+                    color: white;
+                    padding: .2rem .6rem;
+                    border-radius: 20px;
+                }
+            }
+            &__title2{
+                font-family: 'Barlow Condensed', ;
+                padding: 1rem;
+                color: $Dark-Blue;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 40px;
+                
+            }
+            &__paragraphe{
+                padding: 1rem;
+                color: $Dark-GrayishBlue;
+                font-size: 22px;
+            }
+            &__sub{
+                text-transform: uppercase;
+                padding: 1rem;
+                font-size: 18px;
+                color: $Grayish-Blue;
+                font-family: 'Barlow Condensed', ;
+                word-spacing: 3px;
+                input{
+                    letter-spacing: 1.5px;
+                    font-family: 'Barlow Condensed', ;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    background-color: $Red;
+                    border: none;
+                    color: white;
+                    padding: .7rem 1rem;
+                    border-radius: 5px;
+
+                }
+                span{
+                    padding: 0rem .7rem 0rem;
+
+                }
+
+            }
+
+        }
+    }
+
 }

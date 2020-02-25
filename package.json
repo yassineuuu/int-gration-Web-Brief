@@ -1,7 +1,7 @@
 {
   "name": "C2N3-Reenforcement",
   "version": "1.0.0",
-  "description": "Le projet permet d'améliorer vos compétences dans un environnement de travail réel.",
+  "description": "Le projet permet d'améliorer vos compétences dans un environnement de travali réel.",
   "main": "index.js",
   "scripts": {
     "node-sass": "node-sass -w sass -o css"
