@@ -4,6 +4,9 @@
 
 body {
   font-family: "Barlow"; }
+  @media only screen and (min-width: 1440px) {
+    body {
+      padding: 1rem 0rem 0rem 5rem; } }
   body .bg {
     position: absolute;
     top: 0;
@@ -30,7 +33,7 @@ body {
         cursor: pointer;
         opacity: 0; }
         body .menu__hemberger #chick:checked ~ .menu__hemberger__list {
-          transform: scale(1.15); }
+          transform: scale(1.1); }
       body .menu__hemberger__list {
         letter-spacing: 2px;
         font-size: 18px;
@@ -49,6 +52,11 @@ body {
         align-items: center;
         transform: scale(0);
         transition-duration: 0.3s; }
+        @media only screen and (min-width: 1440px) {
+          body .menu__hemberger__list {
+            flex-direction: row;
+            background-color: transparent;
+            position: unset; } }
         body .menu__hemberger__list ul {
           width: 100%;
           text-align: center; }
@@ -76,17 +84,29 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column; }
+    @media only screen and (min-width: 1440px) {
+      body .headings {
+        flex-direction: row-reverse; } }
     body .headings__illustration {
       margin-bottom: 2rem;
       padding: 1rem; }
+      @media only screen and (min-width: 1440px) {
+        body .headings__illustration {
+          margin-top: 5rem; } }
       body .headings__illustration img {
         width: 145%; }
+        @media only screen and (min-width: 1440px) {
+          body .headings__illustration img {
+            width: 140%; } }
     body .headings__discription__title1 {
       font-family: "Barlow Condensed";
       padding: 1rem;
       color: #a0a1ac;
       text-transform: uppercase;
       letter-spacing: 3px; }
+      @media only screen and (min-width: 1440px) {
+        body .headings__discription__title1 {
+          font-size: 24px; } }
       body .headings__discription__title1 span {
         text-align: center;
         font-weight: bold;
@@ -94,6 +114,9 @@ body {
         color: white;
         padding: .2rem .6rem;
         border-radius: 50px; }
+      @media only screen and (min-width: 1440px) {
+        body .headings__discription__title1 {
+          margin-top: 8rem; } }
     body .headings__discription__title2 {
       font-family: "Barlow Condensed";
       padding: 1rem;
@@ -101,10 +124,17 @@ body {
       text-transform: uppercase;
       font-weight: 600;
       font-size: 40px; }
+      @media only screen and (min-width: 1440px) {
+        body .headings__discription__title2 {
+          font-size: 70px; } }
     body .headings__discription__paragraphe {
       padding: 1rem;
       color: #5b5f71;
       font-size: 22px; }
+      @media only screen and (min-width: 1440px) {
+        body .headings__discription__paragraphe {
+          font-size: 28px;
+          max-width: 450px; } }
     body .headings__discription__sub {
       text-transform: uppercase;
       padding: 1rem;
@@ -112,6 +142,9 @@ body {
       color: #a0a1ac;
       font-family: "Barlow Condensed";
       word-spacing: 3px; }
+      @media only screen and (min-width: 1440px) {
+        body .headings__discription__sub {
+          font-size: 24px; } }
       body .headings__discription__sub input {
         letter-spacing: 1.5px;
         font-family: "Barlow Condensed";
