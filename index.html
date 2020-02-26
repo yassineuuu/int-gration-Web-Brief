@@ -24,21 +24,28 @@
 </head>
 
 <body>
+  <div class="bg"></div>
   <header>
     <div class="menu">
       <div class="menu__logo"><img src="images/logo.svg" alt="logo"></div>
-      <nav class="menu__nav menu__nav--hover">
-        <il><a href="#">Product</a></il>
-        <il> <a href="#">Features</a></il>
-        <il> <a href="#">Pricing</a></il>
-        <il> <a href="#">Login</a></il>
-      </nav>
-      <div class="menu__hemberger">
-        <div><input type="checkbox" class="menu__hemberger__check"></div>
+      <nav class="menu__nav">
+        <div class="menu__hemberger">
+         <input type="checkbox" id="chick">
         <div class="menu__hemberger__line menu__hemberger__line--1"></div>
         <div class="menu__hemberger__line menu__hemberger__line--2"></div>
         <div class="menu__hemberger__line menu__hemberger__line--3"></div>
-      </div>
+      
+      <div class="menu__hemberger__list">
+        <ul>
+          <li><a href="#">Product</a></li>
+          <li> <a href="#">Features</a></li>
+          <li> <a href="#">Pricing</a></li>
+          <li class="login"><a href="#">Login</a></li>
+        </ul>
+    </div>
+  </div>
+      </nav>
+      
     </div>
     <div class="headings">
       <div class="headings__illustration"><img src="images/illustration-devices.svg" alt="illustration"></div>

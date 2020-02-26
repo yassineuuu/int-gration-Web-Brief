@@ -1,37 +1,96 @@
-@import "https://fonts.google.com/specimen/Barlow+Condensed";
-// variables
-$Red: hsl(0, 100%, 68%);
-$Dark-Blue: hsl(230, 29%, 20%);
-$Dark-GrayishBlue: hsl(230, 11%, 40%);
-$Grayish-Blue: hsl(231, 7%, 65%);
-$Light-GrayishBlue: hsl(207, 33%, 95%);
-// variables-end
+@import"_variables";
 
 
 *{
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
 }
 
 body {
-    
+
     font-family: 'Barlow', ;
+    .bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 50%;
+        z-index: -10;
+        background-color: $Light-GrayishBlue;
+        border-radius: 0 0 0 55px;
+    }
     .menu{
         display: flex;
         justify-content: space-between;
         padding: 2rem 1rem;
-
-        &__nav{
-            display: none;
-        }
+      
         &__hemberger{
-            &__check{
-                position: absolute;
+            position: absolute;
+            left: 90%;
+            &__line--1,&__line--2,&__line--3{
+                transition-duration: 0.3s;
+            }
+                #chick{
+                     position: absolute;
                 width: 25px;
                 height: 25px;
+                z-index: 2;
                 cursor: pointer;
                 opacity:0;
+                &:checked~.menu__hemberger__list{
+                    transform: scale(1.15);
+                }
+          
+
+                
+               
+            }
+            &__list{
+                letter-spacing: 2px;
+                font-size: 18px;
+                padding: 1rem;
+                text-transform: uppercase;
+                box-shadow: 0px 2px 5px $Grayish-Blue;
+                background-color: white;
+                position: absolute;
+                top: 6rem;
+                left: -1150%;
+                z-index: 1;
+                width: 70vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: scale(0);
+                transition-duration: 0.3s;
+                ul{ 
+                    width: 100%;
+    
+                    text-align: center;
+                    .login{
+                        margin-top: 1rem;
+                        padding: 1.5rem 0rem 1rem;
+                        border-top: 1px solid $Grayish-Blue;
+                        a{
+                            color: $Grayish-Blue;
+                        }
+                        
+                    }
+                    li{
+                    width: 100%;
+                    list-style: none;
+                    padding: .5rem 0rem 1rem;
+                    a{
+                        text-decoration: none;
+                        color: $Dark-Blue;
+                        font-family: 'Barlow Condensed', ;
+                        font-weight: bold;
+                       
+                    }
+                   
+                }
+                
+                }
             }
             &__line{
                 width: 25px;
@@ -39,16 +98,19 @@ body {
                 background-color: $Dark-GrayishBlue;
                 margin: .25rem auto;
             }
+            
         }
     }
     .headings{
+        overflow: hidden;
         display: flex;
         flex-direction: column;
+        
         &__illustration{
+            margin-bottom: 2rem;
             padding: 1rem;
             img{
                 width: 145%;
-
             }
         }
         &__discription{
@@ -65,7 +127,7 @@ body {
                     background-color: $Dark-Blue;
                     color: white;
                     padding: .2rem .6rem;
-                    border-radius: 20px;
+                    border-radius: 50px;
                 }
             }
             &__title2{
@@ -93,10 +155,9 @@ body {
                     letter-spacing: 1.5px;
                     font-family: 'Barlow Condensed', ;
                     text-transform: uppercase;
-                    font-weight: 600;
                     background-color: $Red;
                     border: none;
-                    color: white;
+                    color: $Light-GrayishBlue;
                     padding: .7rem 1rem;
                     border-radius: 5px;
 
@@ -112,3 +173,6 @@ body {
     }
 
 }
+// .menu__hemberger__check:checked ~ .menu__nav__list{
+//     transform: scale(1);
+// }
