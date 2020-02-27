@@ -1,5 +1,5 @@
 @mixin  desktop {
-    @media only screen and (min-width:1440px){
+    @media only screen and (min-width:1024px){
         @content;
         
     }
@@ -40,10 +40,19 @@ body {
         display: flex;
         justify-content: space-between;
         padding: 2rem 1rem;
-        
+        .hmbrgr{
+            @include desktop{
+                display: none;
+            }
+        }
         &__hemberger{
             position: absolute;
             left: 90%;
+            @include desktop{
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            
             &__line--1,&__line--2,&__line--3{
                 transition-duration: 0.3s;
             }
@@ -57,7 +66,9 @@ body {
                     &:checked~.menu__hemberger__list{
                         transform: scale(1.1);
                 }
-          
+                @include desktop{
+                    display: none;
+                }
 
                 
                
@@ -84,19 +95,45 @@ body {
                 @include desktop{
                     flex-direction: row;
                     background-color: transparent;
-                    position: unset;;
-        
+                    position: fixed;
+                    transform: scale(1);
+                    right: 0%;
+                    left: 50%;
+                    top: 2rem;
+                    width: 50vw;
+                    box-shadow: none;
+
                 }
                 ul{ 
                     width: 100%;
     
                     text-align: center;
+                    @include desktop{
+                        display: flex;
+                    }
                     .login{
                         margin-top: 1rem;
                         padding: 1.5rem 0rem 1rem;
                         border-top: 1px solid $Grayish-Blue;
+                        @include desktop{
+                            border: none;
+                            margin-top: 0rem;
+                            padding: 0rem;
+                            &::before{
+                                content: '';
+                                height: 5px;
+                                width: 5px;
+                                display: flex;
+                                background: $Grayish-Blue;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 50%;
+                            }
+
+                        }
                         a{
                             color: $Grayish-Blue;
+
                         }
                         
                     }
@@ -104,6 +141,10 @@ body {
                     width: 100%;
                     list-style: none;
                     padding: .5rem 0rem 1rem;
+                    @include desktop{
+                        padding: 0rem;
+
+                    }
                     a{
                         text-decoration: none;
                         color: $Dark-Blue;
@@ -179,7 +220,8 @@ body {
                 font-weight: 600;
                 font-size: 40px;
                 @include desktop(){
-                    font-size: 70px;
+                    font-size: 68px;
+                    line-height: 60px;
 
                 }
                 
