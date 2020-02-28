@@ -20,9 +20,11 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 2rem 1rem; }
-    @media only screen and (min-width: 1024px) {
-      body .menu .hmbrgr {
-        display: none; } }
+    body .menu .hmbrgr {
+      transition: all ease 0.3s; }
+      @media only screen and (min-width: 1024px) {
+        body .menu .hmbrgr {
+          display: none; } }
     body .menu__hemberger {
       position: absolute;
       left: 90%; }
@@ -41,6 +43,15 @@ body {
         opacity: 0; }
         body .menu__hemberger #chick:checked ~ .menu__hemberger__list {
           transform: scale(1.1); }
+        body .menu__hemberger #chick:checked ~ .hmbrgr {
+          transform: rotate(45deg); }
+          body .menu__hemberger #chick:checked ~ .hmbrgr > div {
+            margin: 0px; }
+        body .menu__hemberger #chick:checked ~ .hmbrgr .menu__hemberger__line--1 {
+          transform: rotate(90deg);
+          position: absolute; }
+        body .menu__hemberger #chick:checked ~ .hmbrgr .menu__hemberger__line--2 {
+          display: none; }
         @media only screen and (min-width: 1024px) {
           body .menu__hemberger #chick {
             display: none; } }
@@ -62,6 +73,10 @@ body {
         align-items: center;
         transform: scale(0);
         transition-duration: 0.3s; }
+        @media only screen and (min-width: 400px) {
+          body .menu__hemberger__list {
+            position: fixed;
+            left: 15%; } }
         @media only screen and (min-width: 1024px) {
           body .menu__hemberger__list {
             flex-direction: row;
@@ -111,6 +126,8 @@ body {
               color: #242942;
               font-family: "Barlow Condensed";
               font-weight: bold; }
+              body .menu__hemberger__list ul li a:hover {
+                text-decoration: underline; }
       body .menu__hemberger__line {
         width: 25px;
         height: 3px;

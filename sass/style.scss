@@ -1,11 +1,21 @@
-@mixin  desktop {
-    @media only screen and (min-width:1024px){
+@mixin desktop {
+    @media only screen and (min-width:1024px) {
         @content;
-        
+
     }
 
-    
+
 }
+
+@mixin bp1 {
+    @media only screen and (min-width:400px) {
+        @content;
+
+    }
+
+
+}
+
 // variables
 $Red: hsl(0, 100%, 68%);
 $Dark-Blue: hsl(230, 29%, 20%);
@@ -14,7 +24,7 @@ $Grayish-Blue: hsl(231, 7%, 65%);
 $Light-GrayishBlue: hsl(207, 33%, 95%);
 // variables-end²
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
@@ -22,10 +32,12 @@ $Light-GrayishBlue: hsl(207, 33%, 95%);
 body {
 
     font-family: 'Barlow', ;
-    @include desktop(){
-           padding: 1rem 0rem 0rem 5rem;         
+
+    @include desktop() {
+        padding: 1rem 0rem 0rem 5rem;
     }
-    .bg{
+
+    .bg {
         position: absolute;
         top: 0;
         right: 0;
@@ -34,47 +46,70 @@ body {
         z-index: -10;
         background-color: $Light-GrayishBlue;
         border-radius: 0 0 0 55px;
-       
+
     }
-    .menu{
+
+    .menu {
         display: flex;
         justify-content: space-between;
         padding: 2rem 1rem;
-        .hmbrgr{
-            @include desktop{
+
+        .hmbrgr {transition: all ease 0.3s;
+            @include desktop {
                 display: none;
             }
         }
-        &__hemberger{
+
+        &__hemberger {
             position: absolute;
             left: 90%;
-            @include desktop{
+
+            @include desktop {
                 display: flex;
                 flex-direction: row-reverse;
             }
-            
-            &__line--1,&__line--2,&__line--3{
+
+            &__line--1,
+            &__line--2,
+            &__line--3 {
                 transition-duration: 0.3s;
             }
-                #chick{
-                    position: absolute;
-                    width: 25px;
-                    height: 25px;
-                    z-index: 2;
-                    cursor: pointer;
-                    opacity:0;
-                    &:checked~.menu__hemberger__list{
-                        transform: scale(1.1);
+
+            #chick {
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                z-index: 2;
+                cursor: pointer;
+                opacity: 0;
+
+                &:checked~.menu__hemberger__list {
+                    transform: scale(1.1);
                 }
-                @include desktop{
+
+                &:checked~.hmbrgr {
+                    transform: rotate(45deg);
+                    &>div{
+                        margin: 0px;
+                    }
+                }
+
+                &:checked~.hmbrgr .menu__hemberger__line--1 {
+                    transform: rotate(90deg);
+                    position: absolute;
+                }
+               
+                &:checked~.hmbrgr .menu__hemberger__line--2 {
                     display: none;
                 }
 
-                
-               
-            
+                @include desktop {
+                    display: none;
+                }
+
             }
-            &__list{
+
+            &__list {
                 letter-spacing: 2px;
                 font-size: 18px;
                 padding: 1rem;
@@ -92,7 +127,13 @@ body {
                 align-items: center;
                 transform: scale(0);
                 transition-duration: 0.3s;
-                @include desktop{
+
+                @include bp1() {
+                    position: fixed;
+                    left: 15%;
+                }
+
+                @include desktop {
                     flex-direction: row;
                     background-color: transparent;
                     position: fixed;
@@ -104,22 +145,27 @@ body {
                     box-shadow: none;
 
                 }
-                ul{ 
+
+                ul {
                     width: 100%;
-    
+
                     text-align: center;
-                    @include desktop{
+
+                    @include desktop {
                         display: flex;
                     }
-                    .login{
+
+                    .login {
                         margin-top: 1rem;
                         padding: 1.5rem 0rem 1rem;
                         border-top: 1px solid $Grayish-Blue;
-                        @include desktop{
+
+                        @include desktop {
                             border: none;
                             margin-top: 0rem;
                             padding: 0rem;
-                            &::before{
+
+                            &::before {
                                 content: '';
                                 height: 5px;
                                 width: 5px;
@@ -131,76 +177,93 @@ body {
                             }
 
                         }
-                        a{
+
+                        a {
                             color: $Grayish-Blue;
 
+
                         }
-                        
-                    }
-                    li{
-                    width: 100%;
-                    list-style: none;
-                    padding: .5rem 0rem 1rem;
-                    @include desktop{
-                        padding: 0rem;
 
                     }
-                    a{
-                        text-decoration: none;
-                        color: $Dark-Blue;
-                        font-family: 'Barlow Condensed', ;
-                        font-weight: bold;
-                       
+
+                    li {
+                        width: 100%;
+                        list-style: none;
+                        padding: .5rem 0rem 1rem;
+
+                        @include desktop {
+                            padding: 0rem;
+
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: $Dark-Blue;
+                            font-family: 'Barlow Condensed', ;
+                            font-weight: bold;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
                     }
-                   
-                }
-                
+
                 }
             }
-            &__line{
+
+            &__line {
                 width: 25px;
                 height: 3px;
                 background-color: $Dark-GrayishBlue;
                 margin: .25rem auto;
             }
-            
+
         }
     }
-    .headings{
+
+    .headings {
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        @include desktop{
+
+        @include desktop {
             flex-direction: row-reverse;
 
         }
-        &__illustration{
+
+        &__illustration {
             margin-bottom: 2rem;
             padding: 1rem;
-            @include desktop(){
-                margin-top: 5rem;  
-              }
-            img{
+
+            @include desktop() {
+                margin-top: 5rem;
+            }
+
+            img {
                 width: 145%;
-                @include desktop(){
+
+                @include desktop() {
                     width: 140%;
 
                 }
             }
         }
-        &__discription{
-            &__title1{
+
+        &__discription {
+            &__title1 {
                 font-family: 'Barlow Condensed', ;
                 padding: 1rem;
                 color: $Grayish-Blue;
                 text-transform: uppercase;
                 letter-spacing: 3px;
-                @include desktop(){
+
+                @include desktop() {
                     font-size: 24px;
 
                 }
-                
-                span{
+
+                span {
                     text-align: center;
                     font-weight: bold;
                     background-color: $Dark-Blue;
@@ -208,45 +271,53 @@ body {
                     padding: .2rem .6rem;
                     border-radius: 50px;
                 }
-                @include desktop(){
-                  margin-top: 8rem;  
+
+                @include desktop() {
+                    margin-top: 8rem;
                 }
             }
-            &__title2{
+
+            &__title2 {
                 font-family: 'Barlow Condensed', ;
                 padding: 1rem;
                 color: $Dark-Blue;
                 text-transform: uppercase;
                 font-weight: 600;
                 font-size: 40px;
-                @include desktop(){
+
+                @include desktop() {
                     font-size: 68px;
                     line-height: 60px;
 
                 }
-                
+
             }
-            &__paragraphe{
+
+            &__paragraphe {
                 padding: 1rem;
                 color: $Dark-GrayishBlue;
                 font-size: 22px;
-                @include desktop(){
+
+                @include desktop() {
                     font-size: 28px;
                     max-width: 450px;
                 }
             }
-            &__sub{
+
+            &__sub {
                 text-transform: uppercase;
                 padding: 1rem;
                 font-size: 18px;
                 color: $Grayish-Blue;
                 font-family: 'Barlow Condensed', ;
                 word-spacing: 3px;
-                @include desktop(){
+
+                @include desktop() {
                     font-size: 24px;
 
                 }
-                input{
+
+                input {
                     letter-spacing: 1.5px;
                     font-family: 'Barlow Condensed', ;
                     text-transform: uppercase;
@@ -257,7 +328,8 @@ body {
                     border-radius: 5px;
 
                 }
-                span{
+
+                span {
                     padding: 0rem .7rem 0rem;
 
                 }
