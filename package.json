@@ -4,7 +4,9 @@
   "description": "Le projet permet d'améliorer vos compétences dans un environnement de travali réel.",
   "main": "index.js",
   "scripts": {
-    "node-sass": "node-sass -w sass -o css"
+    "node-sass": "node-sass -w sass -o css",
+    "compiler": "node-sass sass -o css",
+    "compress": "node-sass --output-style compressed sass -o css"
   },
   "repository": {
     "type": "git",
