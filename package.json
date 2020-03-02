@@ -6,7 +6,8 @@
   "scripts": {
     "node-sass": "node-sass -w sass -o css",
     "compiler": "node-sass sass -o css",
-    "compress": "node-sass --output-style compressed sass -o css"
+    "compress": "node-sass --output-style compressed sass -o css",
+    "concat-css": "concat -o css/styleCon.css css/mixins.css css/style.css css/variables.css"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/yassineuuu/int-gration-Web-Brief/issues"
   },
-  "homepage": "https://github.com/yassineuuu/int-gration-Web-Brief#readme"
+  "homepage": "https://github.com/yassineuuu/int-gration-Web-Brief#readme",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1"
+  }
 }

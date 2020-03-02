@@ -1,28 +1,5 @@
-@mixin desktop {
-    @media only screen and (min-width:1024px) {
-        @content;
-
-    }
-
-
-}
-
-@mixin bp1 {
-    @media only screen and (min-width:400px) {
-        @content;
-
-    }
-
-
-}
-
-// variables
-$Red: hsl(0, 100%, 68%);
-$Dark-Blue: hsl(230, 29%, 20%);
-$Dark-GrayishBlue: hsl(230, 11%, 40%);
-$Grayish-Blue: hsl(231, 7%, 65%);
-$Light-GrayishBlue: hsl(207, 33%, 95%);
-// variables-end²
+@import "mixins.scss";
+@import "variables.scss";
 
 * {
     margin: 0px;
